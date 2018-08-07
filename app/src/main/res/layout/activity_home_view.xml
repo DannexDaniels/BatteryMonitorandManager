@@ -18,8 +18,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/btShowApps"
             android:text="View Running Apps"
+            android:layout_above="@+id/btBatSaver"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btBatSaver"
+            android:text="Battery Saver"
             android:layout_alignParentBottom="true"/>
-
 
         <ProgressBar
             android:id="@+id/pb"

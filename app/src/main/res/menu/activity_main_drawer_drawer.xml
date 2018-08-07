@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_battery"
+            android:icon="@drawable/ic_battery_charging_90_black_24dp"
+            android:title="Power" />
+        <item
+            android:id="@+id/nav_data"
+            android:icon="@drawable/ic_data_usage_black_24dp"
+            android:title="Data" />
+        <item
+            android:id="@+id/nav_memory"
+            android:icon="@drawable/ic_memory_black_24dp"
+            android:title="Memory" />
+        <item
+            android:id="@+id/nav_storage"
+            android:icon="@drawable/ic_storage_black_24dp"
+            android:title="Storage" />
+    </group>
+
+    <item android:title="Information">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:title="About" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
+                android:title="Exit" />
+        </menu>
+    </item>
+
+</menu>

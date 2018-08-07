@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,7 +25,7 @@ public class HomeView extends AppCompatActivity {
     private TextView mTextViewInfo,tvIsCharging,tvChargingMode,tvBatteryCondition;
     private TextView mTextViewPercentage;
     private ProgressBar mProgressBar;
-    private Button btRunningApp;
+    private Button btRunningApp,btBatSaver;
 
     private int mProgressStatus = 0;
 
@@ -179,11 +180,19 @@ public class HomeView extends AppCompatActivity {
         mProgressBar = (ProgressBar) findViewById(R.id.pb);
 
         btRunningApp = (Button) findViewById(R.id.btShowApps);
+        btBatSaver = (Button) findViewById(R.id.btBatSaver);
+
 
         btRunningApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),RunningTasks.class));
+            }
+        });
+        btBatSaver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Settings.ACTION_BATTERY_SAVER_SETTINGS));
             }
         });
     }

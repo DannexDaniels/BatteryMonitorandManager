@@ -30,7 +30,7 @@ public class RunningTasks extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_running_tasks);
 
-        listView = (ListView) findViewById(R.id.lvRunningTasks);
+        listView = findViewById(R.id.lvRunningTasks);
 
 
         ArrayList<MyModel> objects = new ArrayList<MyModel>();
